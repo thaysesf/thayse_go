@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: thayse-go
+    app.kubernetes.io/instance: thayse-go
+    app.kubernetes.io/name: thayse-go
+    version: default
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: thayse-go
+      app.kubernetes.io/instance: thayse-go
+      app.kubernetes.io/name: thayse-go
+      version: default
+  template:
+    metadata:
+      labels:
+        app: thayse-go
+        app.kubernetes.io/instance: thayse-go
+        app.kubernetes.io/name: thayse-go
+        version: default
+    spec:
+      containers:
+      - image: ## adicionar endereço dockerhub:tag
+        imagePullPolicy: IfNotPresent
+        name: thayse-go
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 150m
+            memory: 150Mi
+          requests:
+            cpu: 100m
+            memory: 96Mi
