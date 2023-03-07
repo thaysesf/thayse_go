@@ -14,7 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: 
+      run:
+         go mod init
          go get -u github.com/gorilla/mux  
          go build -v main.go
       
