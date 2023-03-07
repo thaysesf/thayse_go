@@ -14,7 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: go build -v main.go
+      run: 
+         go build -v main.go
+         go get -u github.com/gorilla/mux  
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.0
