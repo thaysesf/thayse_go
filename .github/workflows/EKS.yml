@@ -16,21 +16,16 @@ jobs:
        aws-secret-access-key: ${{secrets.CHAVE_SECRETA}}
        aws-region: us-east-2
         
-    - uses: actions/checkout@v3
-      with:
-        repository: thaysesf/Infra_CI_Kubernetes
-        path: terraform
+    - run: git clone git@github.com:thaysesf/Infra_CI_Kubernetes.git
 
     - name: HashiCorp - Setup Terraform
       uses: hashicorp/setup-terraform@v2.0.3
       
     - run: ls
-    - run: cd terraform/
-    - run: ls
 
-    - run: terraform -chdir=terraform/Infra_CI_Kubernetes/env/Homolog init
+    - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog init
 
-    - run: terraform -chdir=terraform/Infra_CI_Kubernetes/env/Homolog apply -auto-approve
+    - run: terraform -chdir=Infra_CI_Kubernetes/env/Homolog apply -auto-approve
 
     - name: Kubectl tool installer
       uses: Azure/setup-kubectl@v3
