@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   labels:
     name: thayse-go
-    namespace: thayse-go
     app: thayse-go
     app.kubernetes.io/instance: thayse-go
     app.kubernetes.io/name: thayse-go
@@ -13,6 +12,7 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
+      name: thayse-go
       app: thayse-go
       app.kubernetes.io/instance: thayse-go
       app.kubernetes.io/name: thayse-go
@@ -20,6 +20,7 @@ spec:
   template:
     metadata:
       labels:
+        name: thayse
         app: thayse-go
         app.kubernetes.io/instance: thayse-go
         app.kubernetes.io/name: thayse-go
