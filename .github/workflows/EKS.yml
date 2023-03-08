@@ -25,6 +25,8 @@ jobs:
       uses: hashicorp/setup-terraform@v2.0.3
       
     - run: ls
+    - run: cd terraform/
+    - run: ls
 
     - run: terraform -chdir=terraform/Infra_CI_Kubernetes/env/Homolog init
 
