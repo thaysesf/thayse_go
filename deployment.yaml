@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: thayse-go
-  namespace: thayse-go
   labels:
     app: thayse-go
     app.kubernetes.io/instance: thayse-go
