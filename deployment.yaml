@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     name: thayse-go
+    namespace: thayse-go
     app: thayse-go
     app.kubernetes.io/instance: thayse-go
     app.kubernetes.io/name: thayse-go
