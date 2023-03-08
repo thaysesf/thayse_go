@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,17 +25,17 @@ spec:
         version: default
     spec:
       containers:
-      - image: thaysesf/go_ci:main
-        imagePullPolicy: IfNotPresent
-        name: thayse-go
-        ports:
-        - containerPort: 3000
-          name: http
-          protocol: TCP
-        resources:
-          limits:
-            cpu: 150m
-            memory: 150Mi
-          requests:
-            cpu: 100m
-            memory: 96Mi
+        - image: thaysesf/go_ci:main
+          imagePullPolicy: IfNotPresent
+          name: thayse-go
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 150m
+              memory: 150Mi
+            requests:
+              cpu: 100m
+              memory: 96Mi
