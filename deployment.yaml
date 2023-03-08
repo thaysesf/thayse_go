@@ -24,7 +24,7 @@ spec:
         version: default
     spec:
       containers:
-      - image: ## adicionar endereço dockerhub:tag
+      - image: thaysesf/go_ci:main
         imagePullPolicy: IfNotPresent
         name: thayse-go
         ports:
