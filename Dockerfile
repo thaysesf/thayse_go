@@ -6,6 +6,6 @@ WORKDIR /
 
 COPY ./main main
 
-CMD ["chmod +x ./main"]
+RUN chmod +x main 
 
 CMD ["./main"]
