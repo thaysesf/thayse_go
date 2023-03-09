@@ -16,7 +16,7 @@ func main() {
 	rotas.HandleFunc("/api/comment/list/1", getAll).Methods("GET")
 	rotas.HandleFunc("/api/comment/list/2", getAll2).Methods("GET")
 	rotas.HandleFunc("/api/comment/new", create).Methods("POST")
-	var port = ":3000"
+	var port = ":8000"
 	fmt.Println("Server running in port:", port)
 	log.Fatal(http.ListenAndServe(port, rotas))
 
