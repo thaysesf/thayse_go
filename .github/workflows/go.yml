@@ -36,4 +36,3 @@ jobs:
    needs: docker
    uses: ./.github/workflows/EKS.yml
    secrets: inherit
-     
