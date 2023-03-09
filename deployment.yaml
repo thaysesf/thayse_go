@@ -29,7 +29,7 @@ spec:
           imagePullPolicy: IfNotPresent
           name: thayse-go
           ports:
-            - containerPort: 3000
+            - containerPort: 8000
               name: http
               protocol: TCP
           resources:
