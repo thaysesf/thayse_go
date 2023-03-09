@@ -24,7 +24,7 @@ func main() {
 
 type Comentario struct {
 	Email      string
-	Comentario string
+	Comment string
 	Content_id int
 }
 
