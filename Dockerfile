@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-EXPOSE 8000
+EXPOSE 3000
 
 WORKDIR /app
 
