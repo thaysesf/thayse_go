@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 EXPOSE 8000
 
-WORKDIR /
+WORKDIR /app
 
 COPY ./main main
 
